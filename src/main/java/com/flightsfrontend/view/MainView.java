@@ -9,24 +9,25 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
 
 @Route
-public class FlightView extends VerticalLayout {
-    private FlightService flightService;
+public class MainView extends VerticalLayout {
+
+    private FlightService flightService = FlightService.getInstance();
     private Grid<Flight> grid = new Grid<>(Flight.class);
     private TextField filter = new TextField();
 
-    public FlightView() {
-        grid.setColumns("departure", "arrival");
-        add(filter, grid);
-        setSizeFull();
-        filter.setPlaceholder("Filter by arrival");
+    public MainView() {
+        filter.setPlaceholder("Filter by departure...");
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.EAGER);
         filter.addValueChangeListener(e -> update());
 
+        grid.setColumns("departure", "arrival", "timeOfFlight", "type");
+        add(filter, grid);
+        setSizeFull();
     }
 
-    public void update() {
-        grid.setItems(flightService.findByArrival(filter.getValue()));
+    private void update() {
+        grid.setItems(flightService.findByDeparture(filter.getValue()));
     }
 
     public void refresh() {
