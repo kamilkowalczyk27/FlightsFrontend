@@ -6,7 +6,7 @@ Application is using: server.port=4040
 
 ### **Project objective**
 
-The main purpose of this project was do front-end for my application.
+The main purpose of this project was to do front-end for my application.
 
 ### **Test it live**
 
