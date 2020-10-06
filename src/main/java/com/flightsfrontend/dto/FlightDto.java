@@ -26,6 +26,6 @@ public class FlightDto {
     @JsonProperty("timeOfFlight")
     private double timeOfFlight;
 
-//    @JsonProperty("aircraft")
-//    private AircraftDto aircraftDto;
+    @JsonProperty("aircraftDto")
+    private AircraftDto aircraftDto;
 }
