@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Getter
 @Setter
@@ -42,7 +41,4 @@ public class AircraftDto {
 
     @JsonProperty("cruisingSpeed")
     private BigDecimal cruisingSpeed;
-
-//    @JsonProperty("flightDtoList")
-//    private List<FlightDto> flightDtoList;
 }
