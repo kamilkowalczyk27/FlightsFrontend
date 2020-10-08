@@ -8,12 +8,6 @@ Application is using: server.port=4040
 
 The main purpose of this project was to do front-end for my application.
 
-### **Test it live**
-
-The application has been deployed on Heroku cloud.
-
-Link to heroku:
-
 ### **BACK-END**
 
 Back-end to this application - https://github.com/kamilkowalczyk27/FlightsBackend
